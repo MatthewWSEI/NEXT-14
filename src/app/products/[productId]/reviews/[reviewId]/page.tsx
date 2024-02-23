@@ -1,7 +1,8 @@
+"use client"
 import { notFound } from "next/navigation";
 import React from "react";
 
-const getRandomId = (count: number) => {
+const getRandomInt = (count: number) => {
   return Math.floor(Math.random() * count);
 };
 
@@ -10,7 +11,7 @@ const ReviewDetail = ({
 }: {
   params: { productId: string; reviewId: string };
 }) => {
-  const random = getRandomId(2);
+  const random = getRandomInt(2);
 
   if (random === 1) {
     throw new Error("Error Loading review");
